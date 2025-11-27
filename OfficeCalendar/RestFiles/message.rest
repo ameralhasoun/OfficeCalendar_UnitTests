@@ -1,0 +1,29 @@
+// Get all messages sent or received by the currently logged-in user
+GET http://localhost:5097/api/v1/Message HTTP/1.1
+
+###
+
+// Post a new message to user with ID 1
+POST http://localhost:5097/api/v1/Message?sendToUid=1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "content": "my name is Jordy"
+}
+
+###
+
+// Post a new message to user with ID 4
+POST http://localhost:5097/api/v1/Message?sendToUid=4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "content": "my name is Max"
+}
+
+###
+
+// Update message read status for current user
+PUT http://localhost:5097/api/v1/Message?messageId=4 HTTP/1.1
+
+###

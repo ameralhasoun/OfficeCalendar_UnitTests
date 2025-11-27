@@ -1,0 +1,10 @@
+
+using OfficeCalendar.Controllers;
+
+namespace OfficeCalendar.Services;
+
+public interface ILoginService {
+    public LoginStatus CheckPassword(string username, string inputPassword);
+    Task<RegistrationStatus> RegisterUser(string email, string password, string firstName, string lastName, string recuringdays);
+
+}

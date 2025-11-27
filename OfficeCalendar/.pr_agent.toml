@@ -1,0 +1,9 @@
+# Turn on the review feature of qodo merge
+
+[github_app]
+pr_commands = [
+   "/describe",
+    "/compliance",
+    "/improve",
+    "/review",
+]

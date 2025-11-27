@@ -1,0 +1,19 @@
+using OfficeCalendar.Models;
+using OfficeCalendar.Controllers;
+
+namespace OfficeCalendar.Services;
+
+public interface IEventsService {
+    public Task<Event[]> GetAllEvents();
+
+    public Task<Event?> GetEventById(int id);
+
+    public Task CreateEvent(Event newEvent);
+
+    public Task<bool> DeleteEvent(int eventID);
+
+    public Task<int> GetUserId(string? USER_SESSION_KEY);
+
+    public Task<bool> EditEvent(EditEventBody editEventBody, string[] changes);
+}
+

@@ -1,0 +1,45 @@
+// Create an Event_Attendance, for specific user and event
+POST  http://localhost:5097/api/v1/AttendEvent/CreateEventAttendance?EventId=3 HTTP/1.1
+content-type: application/json
+
+###
+
+// Add a review, for specific user and event.
+PUT  http://localhost:5097/api/v1/AttendEvent/AddReview HTTP/1.1
+content-type: application/json
+
+{
+    "Rating": 3,
+    "Feedback": "after thinking about it, i liked it more",
+    "EventId": 1
+}
+
+###
+
+// Get attendees for a specific event
+GET http://localhost:5097/api/v1/AttendEvent/GetEventAttendees?eventId=1 HTTP/1.1
+
+###
+
+// Get attendees for another specific event
+GET http://localhost:5097/api/v1/AttendEvent/GetEventAttendees?eventId=2 HTTP/1.1
+
+###
+
+//Delete attandence for a specific event
+DELETE http://localhost:5097/api/v1/AttendEvent/DeleteEventAttendance?eventId=3 HTTP/1.1
+
+###
+
+// SetEventAttendance
+POST http://localhost:5097/api/v1/AttendEvent/SetEventAttendance?eventId=1 HTTP/1.1
+###
+
+// Create an Event_Attendance, for specific user and event. add event 3 first before running this.
+POST  http://localhost:5097/api/v1/AttendEvent/CreateEventAttendance?eventId=3 HTTP/1.1
+content-type: application/json
+###
+
+// Get My Events
+GET http://localhost:5097/api/v1/AttendEvent/MyEvents HTTP/1.1
+###
